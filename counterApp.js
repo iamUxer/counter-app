@@ -8,26 +8,26 @@
 //   this.reset = () => setNum = 0;
 // };
 
-let count = 0;
 class Calculate {
-  increment(getNum) {
-    this.setNum = getNum;
-    return this.setNum ? (count += this.setNum) : (count += 1);
+  constructor() {
+    this.count = 0;
+  }
+  increment(setNum) {
+    return setNum ? (this.count += setNum) : (this.count += 1);
   }
 
-  decrement(getNum) {
-    this.setNum = getNum;
-    return this.setNum ? (count -= this.setNum) : (count -= 1);
+  decrement(setNum) {
+    return setNum ? (this.count -= setNum) : (this.count -= 1);
   }
 
   reset() {
-    return (count = 0);
+    return (this.count = 0);
   }
 }
 
 const counter = new Calculate();
 
-console.log(counter.increment()); // 1
+// console.log(counter.increment()); // 1
 console.log(counter.increment(3)); // 4
 console.log(counter.increment(3)); // 7
 console.log(counter.decrement()); // 6
