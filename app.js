@@ -1,8 +1,12 @@
+function Counter() {
+  this.countNum = 0;
+}
+
 Counter.prototype.increment = function(num) {
   if (num) {
     this.countNum = this.countNum + num;
   } else {
-    this.countNum = this.getNum + 1;
+    this.countNum = this.countNum + 1;
   }
   return this.countNum;
 };
@@ -11,7 +15,7 @@ Counter.prototype.decrement = function(num) {
   if (num) {
     this.countNum = this.countNum - num;
   } else {
-    this.countNum = this.getNum - 1;
+    this.countNum = this.countNum - 1;
   }
   return this.countNum;
 };
@@ -21,12 +25,7 @@ Counter.prototype.reset = function() {
   return this.countNum;
 };
 
-function Counter(setNum) {
-  this.getNum = setNum;
-  this.countNum = 0;
-}
-
-const counter = new Counter(1);
+const counter = new Counter();
 
 console.log(counter.increment());
 console.log(counter.decrement());
