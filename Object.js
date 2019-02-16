@@ -4,26 +4,49 @@
 //   }
 // }
 
-function Car(name, color, speed) {
-  this.name = name;
-  this.color = color;
-  this.speed = speed;
+// function Car(name, color, speed) {
+//   this.name = name;
+//   this.color = color;
+//   this.speed = speed;
+// }
+
+// Car.prototype.stop = function() {
+//   return (this.speed -= -1);
+// };
+
+// Car.prototype.parking = function() {
+//   return (this.speed = 0);
+// };
+
+// Car.prototype.run = function() {
+//   return (this.speed += 1);
+// };
+
+// const benzCar = new Car('benz', 'black', 5);
+// console.log(benzCar.stop());
+
+class Car {
+  constructor(name, color, speed = 0) {
+    this.name = name;
+    this.color = color;
+    this.speed = speed;
+  }
+
+  stop() {
+    return (this.speed -= -1);
+  }
+  parking() {
+    return (this.speed = 0);
+  }
+  run() {
+    return (this.speed += 1);
+  }
 }
 
-Car.prototype.stop = function() {
-  return (this.speed -= -1);
-};
+const benzCar = new Car('benz', 'black');
+console.log(benzCar);
 
-Car.prototype.parking = function() {
-  return (this.speed = 0);
-};
-
-Car.prototype.run = function() {
-  return (this.speed += 1);
-};
-
-const benzCar = new Car('benz', 'black', 5);
-console.log(benzCar.stop());
+console.log(benzCar.run());
 
 // const addInfo = [];
 
