@@ -11,8 +11,23 @@ class Pen {
 }
 
 class SharpPen extends Pen {
-  write() {
-    super.write();
-    return this.brand + '이 ' + this.thickness + '두께로 써짐';
+  constructor(color, brand, thickness) {
+    super();
   }
 }
+
+class markerPen extends Pen {
+  constructor(color, brand, thickness) {
+    super();
+  }
+}
+
+class ballPen extends Pen {
+  constructor(color, brand, thickness) {
+    super();
+  }
+}
+
+// const sharpPen = new SharpPen();
+
+// console.log(sharpPen.write(3));
