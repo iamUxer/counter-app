@@ -12,19 +12,27 @@ class Pen {
 
 class SharpPen extends Pen {
   constructor(color, brand, thickness) {
-    super();
+    super(color, brand, thickness);
   }
 }
 
 class markerPen extends Pen {
   constructor(color, brand, thickness) {
-    super();
+    super(color, brand, thickness);
+  }
+
+  changeColor(color) {
+    return this.brand + '펜이 ' + this.color + '색으로 바뀜.';
   }
 }
 
 class ballPen extends Pen {
   constructor(color, brand, thickness) {
-    super();
+    super(color, brand, thickness);
+  }
+
+  changeColor(color) {
+    return this.brand + '볼펜이 ' + this.color + '색으로 바뀜.';
   }
 }
 
