@@ -21,18 +21,18 @@ class MarkerPen extends Pen {
     super(color, brand, thickness);
   }
 
-  changeColor(color) {
-    return this.brand + '펜이 ' + color + '색으로 바뀜.';
+  setColor(color) {
+    this.color = color;
+  }
+
+  changeColor() {
+    return this.brand + '볼펜이 ' + color + '색으로 바뀜.';
   }
 }
 
 class BallPen extends Pen {
   constructor(color, brand, thickness) {
     super(color, brand, thickness);
-  }
-
-  changeColor(color) {
-    return this.brand + '볼펜이 ' + color + '색으로 바뀜.';
   }
 }
 
