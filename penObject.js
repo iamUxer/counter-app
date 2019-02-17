@@ -1,8 +1,8 @@
 class Pen {
-  constructor() {
-    this.color = blue;
-    this.maker = momami;
-    this.thickness = 3;
+  constructor(color, brand, thickness) {
+    this.color = color;
+    this.brand = brand;
+    this.thickness = thickness;
   }
 
   write(move) {
