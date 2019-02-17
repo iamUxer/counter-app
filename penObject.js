@@ -6,6 +6,6 @@ class Pen {
   }
 
   write(move) {
-    return move;
+    return this.color + '색으로' + move + '만큼 써짐';
   }
 }
